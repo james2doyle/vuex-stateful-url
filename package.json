@@ -1,0 +1,35 @@
+{
+  "name": "vuex-stateful-url",
+  "version": "1.0.0",
+  "description": "StatefulURL is a Vuex plugin that can read and write the state from a query string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james2doyle/vuex-stateful-url.git"
+  },
+  "keywords": [
+    "vuex",
+    "state",
+    "store",
+    "sync",
+    "tabs",
+    "origin"
+  ],
+  "author": "James Doyle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/james2doyle/vuex-stateful-url/issues"
+  },
+  "homepage": "https://github.com/james2doyle/vuex-stateful-url#readme",
+  "dependencies": {
+    "json-url": "^2.6.0"
+  }
+}
