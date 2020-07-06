@@ -10,7 +10,7 @@ const jsonURL = require('json-url')('lzw');
  */
 function StatefulURL (config = {}) {
   // bail if not in a browser or missing features
-  if (typeof window === 'undefined' && typeof window.URLSearchParams === 'function') {
+  if (typeof window === 'undefined' || typeof window.URLSearchParams !== 'function' || typeof window.URL !== 'function') {
     return;
   }
 
@@ -44,7 +44,7 @@ function StatefulURL (config = {}) {
         .compress(state)
         .then((currentState) => {
           search.set(key, currentState);
-          const url = new URL(window.location.href);
+          const url = new window.URL(window.location.href);
           url.search = '?' + search.toString();
 
           const path = url.toString();
